@@ -1,0 +1,11 @@
+.cartflexxcol {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* border: 2px solid brown; */
+}
+.cartitemsflexxcol {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid tomato; */
+}

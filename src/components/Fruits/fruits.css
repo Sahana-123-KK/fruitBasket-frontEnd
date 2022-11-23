@@ -1,0 +1,27 @@
+.fruitsflexxcol {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 2px solid brown;
+}
+.fruitscontainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: antiquewhite;
+  color: grey;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.fruitscount {
+  width: 100%;
+}
+.fruitswrappercol {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  justify-content: space-between;
+}

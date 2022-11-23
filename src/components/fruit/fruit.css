@@ -1,0 +1,80 @@
+.fruititemflexxrow {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  background-color: white;
+  color: black;
+  width: 40%;
+  margin: 10px;
+  justify-content: space-between;
+}
+.fruitimg {
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 5px 5px whitesmoke;
+}
+.fruitinfoflexxcol {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 55%;
+}
+.offerfruit {
+  position: absolute;
+  background-color: #a0cd4a;
+  color: white;
+  padding: 10px;
+  border-radius: inherit;
+  font-weight: bold;
+}
+.flexxrowicondays {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.crosscost {
+  text-decoration: line-through;
+}
+.fruitinfoflexxcol a {
+  color: black;
+  text-decoration: none;
+}
+/* .fruitname {
+
+  color: black;
+  text-decoration: none !important;
+} */
+a {
+  /* text-decoration: none; */
+}
+.quantityfruit {
+  padding: 10px;
+  background-color: #ededed;
+  border-radius: 5px;
+}
+.btnfb {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  background-color: #ff3c4b;
+  font-size: 20px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
+.ratingvalue{
+  color: gray;
+  font-size: larger;
+}
+.ratingflexxrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ratingflexxrow i {
+  color: #cfcf76;
+  font-size: xx-large;
+}

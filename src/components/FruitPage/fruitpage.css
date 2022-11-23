@@ -1,0 +1,122 @@
+.fruitpageflexxcol {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid blue; */
+  padding: 20px;
+  background-color: white;
+  align-items: flex-start;
+}
+.all {
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.priceinfoflexxrow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px;
+}
+.imgcontainer {
+  width: 40%;
+  /* width: 100%; */
+  /* border: 2px solid brown; */
+}
+.vegicon {
+  position: absolute;
+  font-size: 200%;
+  color: green;
+  /* left: 0px;
+  bottom: 10px; */
+}
+.commoncls {
+  margin: 5px;
+}
+.getnow {
+  padding: 10px;
+  color: grey;
+  margin: 10px 0px;
+  /* width: 50%; */
+  background-color: white;
+}
+.infofruits {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid grey;
+  width: 50%;
+  justify-content: space-evenly;
+}
+.fruitdisplay {
+  width: 80%;
+  border-radius: 10px;
+}
+.aboutfruit {
+  display: flex;
+  flex-direction: column;
+}
+.abouthead {
+  font-weight: normal;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+
+  font-size: x-large;
+}
+.aboutfruit p {
+  padding: 10px;
+  margin: 3px 0px;
+  color: grey;
+}
+.fruitsflexxrowpage {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.fruitpagebtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.strikedprice {
+  text-decoration: line-through;
+  color: grey;
+}
+.btnfb {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  background-color: #ff3c4b;
+  font-size: 20px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
+.btn2 {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  background-color: #524c4c;
+  font-size: 20px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
+.mrp {
+  font-weight: bold;
+}
+.offervalue {
+  color: white;
+  padding: 5px;
+  background-color: #ff3c4b;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.taxes {
+  font-size: 15px;
+  color: grey;
+}

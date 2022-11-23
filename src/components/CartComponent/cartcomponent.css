@@ -1,0 +1,29 @@
+.cartitemflexxrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+.cartitemimg {
+  width: 15%;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.piecesqnty {
+  color: grey;
+}
+.nowprice {
+  font-weight: bold;
+}
+.cutprice {
+  text-decoration: line-through;
+  color: grey;
+}
+.cartiteminfoflexxcol {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
