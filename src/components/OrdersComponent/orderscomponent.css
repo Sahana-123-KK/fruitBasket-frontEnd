@@ -1,0 +1,47 @@
+.ordercompflexxrow {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border: 2px solid cornflowerblue;
+  margin: 10px 0px;
+  border-radius: 10px;
+  justify-content: flex-start;
+}
+.orderimgratiflexxcol {
+  display: flex;
+  width: 15%;
+  flex-direction: column;
+}
+.orderdetailsflexxcol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  margin-left: 20px;
+}
+.orderimg {
+  width: 100%;
+}
+.typeorder {
+  color: grey;
+  font-weight: 600;
+  margin: 3px 0px;
+}
+.orderaddress {
+  font-weight: 500;
+}
+.orderdetailsflexxcol a {
+  text-decoration: none;
+  color: inherit;
+}
+.addressoforder {
+  color: grey;
+}
+.quantityorder {
+  color: grey;
+}
+
+.ratingorderflexxrow i {
+  color: #a0cd4a;
+  font-size: large;
+}

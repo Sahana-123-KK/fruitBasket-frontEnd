@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import fruitContext from "../../context/FruitContext";
 import CartComponent from "../CartComponent/CartComponent";
+import { Link } from "react-router-dom";
 import "./cart.css";
 
 const Cart = () => {
   // const [cart, setCart] = useState([{}, {}]);
+  const [success, setSuccess] = useState(false);
   const { cart, setCart } = useContext(fruitContext);
   const [isCheckout, setIsCheckout] = useState(false);
   const [orderInfo, setOrderInfo] = useState({
@@ -41,13 +43,21 @@ const Cart = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          token: localStorage.getItem("tokenid"),
         },
         body: JSON.stringify(orderInfo),
       });
       console.log(response);
       const json = await response.json();
       console.log(json);
-      alert("Order Placed Successfully");
+      if (json?.success) {
+        alert("Order Placed Successfully");
+        setSuccess(true);
+        // setCart([]);
+      } else {
+        alert("Couldn't Place Order Successfully");
+        return;
+      }
     } catch (error) {
       console.log(error);
       alert("Couldn't Place Order");
@@ -68,7 +78,7 @@ const Cart = () => {
           return <CartComponent key={ind} item={item} />;
         })}
       </div>
-      {cart.length == 1 && isCheckout && (
+      {cart.length == 1 && isCheckout && !success && (
         <div className="placeorder">
           <div className="mb-3">
             <h2>Enter Your Delivery Details</h2>
@@ -87,6 +97,24 @@ const Cart = () => {
                 Place Order
               </button>
             </div>
+          </div>
+        </div>
+      )}
+      {success && (
+        <div className="successmessflexxcol">
+          <h1 className="iconsuccess">
+            <i class="fa-regular fa-circle-check"></i>
+          </h1>
+          <h4 className="successmessage">
+            Your Order Has Been Placed Successfully
+          </h4>
+          <div className="successbtnflexxrow">
+            <Link to="/fruits">
+              <button className="btnfbsuccess">Continue Shopping</button>
+            </Link>
+            <Link to="/orders">
+              <button className="btn2vieworder">My Orders</button>
+            </Link>
           </div>
         </div>
       )}

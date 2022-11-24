@@ -33,7 +33,12 @@ const Signup = () => {
       console.log(response);
       const json = await response.json();
       console.log(json);
-      navigate("/fruits");
+      if (json?.success) {
+        localStorage.setItem("tokenid", json?.token);
+        navigate("/fruits");
+      } else {
+        alert("Couldn't SignUp Successfully");
+      }
     } catch (error) {
       alert("Unable to Signup");
       console.log(error);

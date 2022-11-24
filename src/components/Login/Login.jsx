@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./login.css"
+import "./login.css";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -32,6 +32,7 @@ const Login = () => {
       const json = await response.json();
       console.log(json);
       if (json?.success) {
+        localStorage.setItem("tokenid", json?.token);
         navigate("/fruits");
       } else {
         alert("Couldn't Login Successfully");

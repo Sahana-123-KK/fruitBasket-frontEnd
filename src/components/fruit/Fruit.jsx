@@ -27,7 +27,10 @@ const Fruit = ({ item }) => {
         <Link to={item?._id}>
           <h2 className="fruitname">{item?.name}</h2>
         </Link>
-        <p className="quantityfruit">1Kg-(Approx.{item?.pieces} pcs)</p>
+        <p className="quantityfruit">
+          {" "}
+          {item?.quantity} Kg-(Approx.{item?.pieces} pcs)
+        </p>
         <h5 className="fruitcost">
           ₹{item?.price} <span className="crosscost">₹78.95</span>
         </h5>

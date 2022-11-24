@@ -45,7 +45,8 @@ const FruitPage = () => {
     <div className="all">
       <div className="fruitpageflexxcol">
         <h2 className="fruitnamepage">
-          {fruitData?.name},1 kg-(Approx. {fruitData?.pieces} pcs)
+          {fruitData?.name},{fruitData?.quantity} kg-(Approx.{" "}
+          {fruitData?.pieces} pcs)
         </h2>
         <p className="priceinfoflexxrow">
           <span className="mrp commoncls">Rs {fruitData?.price} </span>
