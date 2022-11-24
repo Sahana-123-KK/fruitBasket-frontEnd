@@ -2,10 +2,30 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  height: 95vh;
   /* border: 2px solid brown; */
 }
 .cartitemsflexxcol {
   display: flex;
   flex-direction: column;
   /* border: 2px solid tomato; */
+}
+.orderflexxrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.checkout {
+  display: flex;
+  width: 98%;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 10px;
+  flex-direction: row;
+  padding: 10px;
+  /* border: 2px solid red; */
+  background-color: #ebebeb;
+  border-radius: 10px;
 }

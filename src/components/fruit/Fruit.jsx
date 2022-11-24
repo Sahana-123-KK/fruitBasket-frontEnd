@@ -1,8 +1,20 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import fruitContext from "../../context/FruitContext";
 import "./fruit.css";
 // import orange from "../../images/orange.jpg";
 const Fruit = ({ item }) => {
+  const { cart, setCart } = useContext(fruitContext);
+  const navigate = useNavigate();
+
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
+  useEffect(() => {
+    if (cart.length === 1) {
+      navigate("/cart");
+    }
+  }, [cart]);
   return (
     <div className="fruititemflexxrow">
       <img src={item?.image} alt="" className="fruitimg" />
@@ -19,7 +31,14 @@ const Fruit = ({ item }) => {
         <h5 className="fruitcost">
           ₹{item?.price} <span className="crosscost">₹78.95</span>
         </h5>
-        <button className="btnfb">Add</button>
+        <button
+          onClick={() => {
+            addToCart(item);
+          }}
+          className="btnfb"
+        >
+          Add
+        </button>
       </div>
     </div>
   );

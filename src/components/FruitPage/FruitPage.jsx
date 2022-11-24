@@ -1,19 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import fruitContext from "../../context/FruitContext";
 import orange from "../../images/orange.jpg";
 
 import "./fruitpage.css";
 
 const FruitPage = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [fruitData, setFruitData] = useState({});
-
+  const { cart, setCart } = useContext(fruitContext);
   console.log(location.pathname.split("/")[2]);
   let id = location.pathname.split("/")[2];
 
   useEffect(() => {
     getFruit();
   }, []);
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+  };
+  useEffect(() => {
+    if (cart.length === 1) {
+      navigate("/cart");
+    }
+  }, [cart]);
 
   const getFruit = async () => {
     try {
@@ -72,7 +82,12 @@ const FruitPage = () => {
                 {" "}
                 <i class="fa-regular fa-bookmark"></i> &nbsp;Save For Later
               </button>
-              <button className="btnfb">
+              <button
+                onClick={() => {
+                  addToCart(fruitData);
+                }}
+                className="btnfb"
+              >
                 <i class="fa-solid fa-basket-shopping"></i> &nbsp;Add To Basket
               </button>
             </div>

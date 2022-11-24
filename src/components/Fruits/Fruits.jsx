@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import fruitContext from "../../context/FruitContext";
 import Fruit from "../fruit/Fruit";
 import "./fruits.css";
 
 const Fruits = () => {
+  const { cart, setCart } = useContext(fruitContext);
+
+  console.log(cart);
   const [fruits, setFruits] = useState([{}, {}, {}, {}, {}]);
   const getFruits = async () => {
     try {

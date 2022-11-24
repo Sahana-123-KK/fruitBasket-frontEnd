@@ -27,3 +27,13 @@
   flex-direction: column;
   width: 65%;
 }
+.btnfbcart {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  background-color: #ff3c4b;
+  font-size: 15px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
