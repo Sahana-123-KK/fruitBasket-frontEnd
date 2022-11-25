@@ -9,6 +9,18 @@
   margin: 10px;
   justify-content: space-between;
 }
+.fruititemflexxrownot {
+  cursor:not-allowed;
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  background-color: grey;
+  color: black;
+  width: 40%;
+  margin: 10px;
+  justify-content: space-between;
+}
 .fruitimg {
   width: 40%;
   border-radius: 10px;
@@ -68,6 +80,11 @@ a {
 .ratingvalue {
   color: gray;
   font-size: larger;
+}
+.flexxrowdeliveryicon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .ratingflexxrow {
   display: flex;

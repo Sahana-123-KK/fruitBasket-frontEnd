@@ -1,0 +1,30 @@
+.logincard {
+  background-color: #a0cd4a;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+
+  width: 35%;
+}
+.allforms {
+  margin-top: 10vh;
+
+  height: 80vh !important;
+  display: flex;
+  width: 100% !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.linksbtnsloginflexxrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.linksbtnsloginflexxrow a {
+  text-decoration: none;
+  color: inherit;
+  font-size: larger;
+  font-weight: 600;
+}

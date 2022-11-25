@@ -61,6 +61,11 @@ const FruitPage = () => {
     }
   };
   const submitComment = async () => {
+    setRatingCommand({
+      comment: "",
+      rating: 1,
+      fruitId: id,
+    });
     try {
       const response = await fetch(
         "http://localhost:8000/api/comments/create",
@@ -147,13 +152,14 @@ const FruitPage = () => {
                 <i className="fa-regular fa-bookmark"></i> &nbsp;Save For Later
               </button>
               <button
+                disabled={fruitData?.count === 0}
                 onClick={() => {
                   addToCart(fruitData);
                 }}
                 className="btnfb"
               >
-                <i className="fa-solid fa-basket-shopping"></i> &nbsp;Add To
-                Basket
+                <i className="fa-solid fa-basket-shopping"></i> &nbsp;
+                {fruitData?.count !== 0 ? "Add To Basket" : "Out of Stock"}
               </button>
             </div>
           </div>
@@ -173,6 +179,7 @@ const FruitPage = () => {
                 Comment
               </label>
               <textarea
+                value={ratingCommand?.comment}
                 onChange={handleChange}
                 name="comment"
                 className="form-control"
@@ -186,6 +193,7 @@ const FruitPage = () => {
                 Rating
               </label>
               <select
+                value={ratingCommand?.rating}
                 onChange={handleChange}
                 name="rating"
                 className="form-select"

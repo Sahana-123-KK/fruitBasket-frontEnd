@@ -35,6 +35,14 @@ const Fruits = () => {
       <h1 className="fruitshead">
         Experience our Hand Picked Fruits with Love For U
       </h1>
+      <div className="searchfruitflexxrow">
+        <input
+          type="search"
+          placeholder="Search Fruits"
+          className="searchfruits"
+        />
+        <button className="btnfbsearch">Search</button>
+      </div>
       <div className="fruitscontainer">
         <h4 className="fruitscount">{fruits.length} Items</h4>
         <div className="fruitswrappercol">

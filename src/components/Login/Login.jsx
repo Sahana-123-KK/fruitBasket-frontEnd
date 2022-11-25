@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
@@ -8,6 +8,11 @@ const Login = () => {
     email: "",
     password: "",
   });
+  useEffect(() => {
+    if (localStorage.getItem("tokenid")) {
+      navigate("/fruits");
+    }
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,8 +29,10 @@ const Login = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // "Access-Control-Allow-Credentials": true,
         },
         body: JSON.stringify(credentials),
+        credentials: "include", //-->When we use cors() we need to include this so that we can have exhange of cookies and stuff
       });
 
       console.log(response);
@@ -43,41 +50,45 @@ const Login = () => {
     }
   };
   return (
-    <div className="container w-50">
-      <h2 className="mt-5 mb-2">Login To Continue</h2>
-      <form onSubmit={loginfunction}>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label">
-            Email address
-          </label>
-          <input
-            value={credentials?.email}
-            onChange={handleChange}
-            name="email"
-            type="email"
-            className="form-control"
-            id="email"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            value={credentials?.password}
-            onChange={handleChange}
-            name="password"
-            type="password"
-            className="form-control"
-            id="password"
-          />
-        </div>
-
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+    <div className="allforms">
+      <div className="container  logincard">
+        <h2 className="mt-2 mb-2">Login To Continue</h2>
+        <form onSubmit={loginfunction}>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email address
+            </label>
+            <input
+              value={credentials?.email}
+              onChange={handleChange}
+              name="email"
+              type="email"
+              className="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Password
+            </label>
+            <input
+              value={credentials?.password}
+              onChange={handleChange}
+              name="password"
+              type="password"
+              className="form-control"
+              id="password"
+            />
+          </div>
+          <div className="linksbtnsloginflexxrow">
+            <button type="submit" className="btnfb">
+              Submit
+            </button>
+            <Link to="/signup">Create an Account</Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

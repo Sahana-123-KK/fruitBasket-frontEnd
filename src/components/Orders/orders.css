@@ -1,7 +1,8 @@
-.ordersflexxcol{
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    border: 2px solid coral;
-    
+.ordersflexxcol {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin-top: 10vh;
+
+  border: 2px solid coral;
 }

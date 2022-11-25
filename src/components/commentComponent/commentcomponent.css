@@ -56,6 +56,17 @@
   cursor: pointer;
   /* margin: 8px 0px; */
 }
+.btnfbcommentsupd {
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: #ff3c4b;
+  font-size: 13px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin: 8px 0px;
+}
 .btnscommentactionflexxrow {
   display: flex;
   flex-direction: row;

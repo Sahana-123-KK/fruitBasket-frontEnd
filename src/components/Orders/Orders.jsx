@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import OrdersComponent from "../OrdersComponent/OrdersComponent";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./orders.css";
 
 const Orders = () => {
@@ -26,9 +26,14 @@ const Orders = () => {
       console.log(error);
     }
   };
+  const navigate = useNavigate();
 
   useEffect(() => {
-    getOrders();
+    if (localStorage.getItem("tokenid")) {
+      getOrders();
+    } else {
+      navigate("/login");
+    }
   }, []);
 
   return (

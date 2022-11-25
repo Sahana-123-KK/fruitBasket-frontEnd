@@ -5,6 +5,7 @@
   padding: 20px;
   background-color: white;
   align-items: flex-start;
+  margin-top: 10vh;
 }
 .comments {
   cursor: pointer;

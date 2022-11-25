@@ -27,6 +27,11 @@ const OrdersComponent = ({ order }) => {
         <p className="orderaddress">
           Delivered to: <span className="addressoforder">{order?.address}</span>
         </p>
+        <div className="flexxrowwritereview">
+          <Link to={`/fruits/${order?.order?._id}`}>
+            <button className="btnfbgreen">Write a Review</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

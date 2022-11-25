@@ -16,13 +16,20 @@ const Fruit = ({ item }) => {
     }
   }, [cart]);
   return (
-    <div className="fruititemflexxrow">
+    <div
+      className={
+        item?.count !== 0 ? "fruititemflexxrow" : "fruititemflexxrownot"
+      }
+    >
       <img src={item?.image} alt="" className="fruitimg" />
       <span className="offerfruit">{item?.offer}% OFF</span>
       <div className="fruitinfoflexxcol">
         <div className="flexxrowicondays">
           <h5 className="type">FRESHO</h5>
-          <i class="fa-solid fa-truck"> &nbsp;1day</i>
+          <div className="flexxrowdeliveryicon">
+            <i class="fa-solid fa-truck"> </i> &nbsp;
+            <span className="daysno">1day</span>
+          </div>
         </div>
         <Link to={item?._id}>
           <h2 className="fruitname">{item?.name}</h2>

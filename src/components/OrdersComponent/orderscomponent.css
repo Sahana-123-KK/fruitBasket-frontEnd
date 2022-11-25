@@ -7,6 +7,26 @@
   border-radius: 10px;
   justify-content: flex-start;
 }
+.btnfbgreen {
+  padding: 8px;
+  /* width: 10% !important; */
+  height: fit-content;
+  color: white;
+  border-radius: 5px;
+
+  background-color: #a0cd4a;
+  font-size: 15px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0px 20px;
+}
+.flexxrowwritereview {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}
 .orderimgratiflexxcol {
   display: flex;
   width: 15%;

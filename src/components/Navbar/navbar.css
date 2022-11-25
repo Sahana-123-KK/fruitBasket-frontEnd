@@ -1,0 +1,52 @@
+.navbarflexxrow {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  background-color: #a0cd4a;
+  color: white;
+  /* border: 2px solid red; */
+  align-items: center;
+  position: fixed;
+  justify-content: space-between;
+  width: 100%;
+  top: 0px;
+  z-index: 100;
+}
+.logoflexxrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.linktypeflexxcol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+}
+.linksflexxrow {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 30%;
+}
+.linksflexxrow a {
+  color: white;
+  text-decoration: none;
+}
+.linksflexxrow a:hover {
+  color: white;
+  text-decoration: none;
+}
+.headlogo {
+  font-weight: normal;
+
+  margin: 2px 0px;
+}
+.logoiconfb {
+  font-size: 300%;
+  margin: 0px 10px;
+}
+.logoimg {
+  width: 20%;
+}

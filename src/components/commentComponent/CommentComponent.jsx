@@ -43,6 +43,12 @@ const CommentComponent = ({ comment }) => {
     setRatingCommand({ ...ratingCommand, [name]: value });
   };
   const updateComment = async () => {
+    // setRatingCommand()
+    // setRatingCommand({
+    //   comment: comment?.comment,
+    //   rating: comment?.rating,
+    //   // fruitId: comment?.fruitId,
+    // });
     try {
       const response = await fetch(
         `http://localhost:8000/api/comments/update/${comment?._id}`,
@@ -108,7 +114,7 @@ const CommentComponent = ({ comment }) => {
               </select>
             </div>
           </div>
-          <button onClick={updateComment} className="btnfbcommentsdel">
+          <button onClick={updateComment} className="btnfbcommentsupd">
             Update
           </button>
         </div>

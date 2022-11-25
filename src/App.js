@@ -7,13 +7,17 @@ import Signup from "./components/Signup/Signup";
 import Orders from "./components/Orders/Orders";
 import FruitState from "./context/FruitState";
 import Cart from "./components/Cart/Cart";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
       <FruitState>
         <Router>
+          <Navbar />{" "}
+          {/* if we write outside router, and we use link tag in it,it then creates issues also we cant write inside routes, if we do , we wont get as default, so the way is declaring inside router but outside routes*/}
           <Routes>
+            {/* <Route element={<Navbar />} /> */}
             <Route path="/fruits" element={<Fruits />}></Route>
             <Route path="/fruits/:id" element={<FruitPage />} />
             <Route path="/login" element={<Login />} />

@@ -3,6 +3,7 @@
   flex-direction: column;
   padding: 30px;
   border: 2px solid brown;
+  margin-top: 10vh;
 }
 .fruitscontainer {
   display: flex;
@@ -16,6 +17,36 @@
 }
 .fruitscount {
   width: 100%;
+}
+.searchfruitflexxrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.btnfbsearch {
+  padding: 15px;
+  /* width: 10% !important; */
+  height: fit-content;
+  color: white;
+  border-radius: 5px;
+
+  background-color: #a0cd4a;
+  font-size: 25px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0px 20px;
+}
+.searchfruits {
+  width: 80%;
+  padding: 15px 15px;
+  border-radius: 10px;
+  background: aliceblue;
+  border: none;
+  outline: none;
+  font-size: x-large;
+  margin: 15px 0px;
 }
 .fruitswrappercol {
   width: 100%;

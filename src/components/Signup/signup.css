@@ -1,0 +1,16 @@
+.allformssignup {
+  height: 80vh !important;
+  display: flex;
+  width: 100% !important;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+}
+.signupcard {
+  background-color: #a0cd4a;
+  color: white;
+  padding: 20px;
+  width: 35%;
+  border-radius: 10px;
+}

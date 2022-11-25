@@ -53,6 +53,7 @@ const Cart = () => {
       if (json?.success) {
         alert("Order Placed Successfully");
         setSuccess(true);
+        setCart([]);
         // setCart([]);
       } else {
         alert("Couldn't Place Order Successfully");
@@ -63,6 +64,7 @@ const Cart = () => {
       alert("Couldn't Place Order");
     }
   };
+
   return (
     <div className="cartflexxcol">
       <h2 className="carthead">
