@@ -65,7 +65,7 @@ a {
   width: fit-content;
   cursor: pointer;
 }
-.ratingvalue{
+.ratingvalue {
   color: gray;
   font-size: larger;
 }
@@ -75,6 +75,6 @@ a {
   align-items: center;
 }
 .ratingflexxrow i {
-  color: #cfcf76;
+  color: #a0cd4a;
   font-size: xx-large;
 }

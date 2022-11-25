@@ -7,7 +7,7 @@ const Fruits = () => {
   const { cart, setCart } = useContext(fruitContext);
 
   console.log(cart);
-  const [fruits, setFruits] = useState([{}, {}, {}, {}, {}]);
+  const [fruits, setFruits] = useState([]);
   const getFruits = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/fruits/all", {

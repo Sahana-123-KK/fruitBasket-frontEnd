@@ -6,6 +6,26 @@
   background-color: white;
   align-items: flex-start;
 }
+.comments {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.commentsflexxcol {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid cornflowerblue; */
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-radius: 10px;
+  width: 40%;
+  margin: 10px 0px;
+}
+.addnewcomm {
+  color: #a0cd4a;
+  text-align: center;
+}
 .all {
   background-color: wheat;
   display: flex;
@@ -24,6 +44,10 @@
   width: 40%;
   /* width: 100%; */
   /* border: 2px solid brown; */
+}
+.allcomments {
+  display: flex;
+  flex-direction: column;
 }
 .vegicon {
   position: absolute;
@@ -72,6 +96,7 @@
 }
 .fruitsflexxrowpage {
   width: 100%;
+  flex-wrap: wrap;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -85,6 +110,17 @@
 .strikedprice {
   text-decoration: line-through;
   color: grey;
+}
+.btnfbcommentssub {
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  background-color: #ff3c4b;
+  font-size: 15px;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+  margin: 10px 0px;
 }
 .btnfb {
   padding: 10px 15px;
@@ -105,6 +141,20 @@
   border: none;
   width: fit-content;
   cursor: pointer;
+}
+.commentinp {
+  width: 80%;
+}
+.flexxrowcommrat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+.ratingdrop {
+  width: 14%;
+  margin: 5px 0px;
 }
 .mrp {
   font-weight: bold;

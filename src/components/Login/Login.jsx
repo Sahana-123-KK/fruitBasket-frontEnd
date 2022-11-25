@@ -33,6 +33,7 @@ const Login = () => {
       console.log(json);
       if (json?.success) {
         localStorage.setItem("tokenid", json?.token);
+        localStorage.setItem("userinfo", JSON.stringify(json?.user));
         navigate("/fruits");
       } else {
         alert("Couldn't Login Successfully");

@@ -8,10 +8,11 @@
   display: flex;
   flex-direction: row;
   padding: 10px;
-  background-color: antiquewhite;
+  background-color: #f7f7f7;
   color: grey;
   align-items: flex-start;
   flex-wrap: wrap;
+  /* justify-content: space-evenly; */
 }
 .fruitscount {
   width: 100%;
@@ -21,6 +22,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
 
   justify-content: space-between;
