@@ -39,6 +39,10 @@
   font-size: 250%;
   margin: 5px 0px;
 }
+.nocart {
+  color: #524c4c;
+  font-size: large;
+}
 .successmessflexxcol {
   margin-top: 20px;
   display: flex;

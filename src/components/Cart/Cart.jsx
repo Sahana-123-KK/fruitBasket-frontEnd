@@ -71,10 +71,10 @@ const Cart = () => {
 
   return (
     <div className="cartflexxcol">
-      <h2 className="carthead">{cart.length == 1 && "Your Cart is Full"}</h2>
+      <h2 className="carthead">{cart.length == 1 && "Your Basket is Full"}</h2>
       <p className="nocart">
-        {cart.length > 0 && cart.length} &nbsp;
-        {cart.length > 1 ? "items" : cart.length > 0 && "item"}{" "}
+        {cart.length > 0 && cart.length} 
+        {cart.length > 1 ? "items" : cart.length > 0 && " item"}{" "}
       </p>
       <div className="cartitemsflexxcol">
         {cart.map((item, ind) => {
