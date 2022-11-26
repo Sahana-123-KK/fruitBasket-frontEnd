@@ -9,7 +9,7 @@ const Signup = () => {
     name: "",
     email: "",
     password: "",
-    isAdmin: false,
+    isAdmin: "false",
   });
   useEffect(() => {
     if (localStorage.getItem("tokenid")) {
@@ -19,11 +19,11 @@ const Signup = () => {
   const updateChange = (e) => {
     if (e.target.checked) {
       console.log("Checked");
-      setSignupCredentials({ ...signupCredentials, isAdmin: true });
+      setSignupCredentials({ ...signupCredentials, isAdmin: "true" });
       //   setSignupCredentials{...signupCredentials}
     } else {
       console.log("Not Checked");
-      setSignupCredentials({ ...signupCredentials, isAdmin: false });
+      setSignupCredentials({ ...signupCredentials, isAdmin: "false" });
     }
   };
   const signup = async (e) => {

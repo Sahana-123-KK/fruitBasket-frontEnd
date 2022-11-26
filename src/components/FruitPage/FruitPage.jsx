@@ -61,30 +61,34 @@ const FruitPage = () => {
     }
   };
   const submitComment = async () => {
-    setRatingCommand({
-      comment: "",
-      rating: 1,
-      fruitId: id,
-    });
-    try {
-      const response = await fetch(
-        "http://localhost:8000/api/comments/create",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            token: localStorage.getItem("tokenid"),
-          },
-          body: JSON.stringify(ratingCommand),
-        }
-      );
-      console.log(response);
-      const json = await response.json();
-      console.log(json);
-      // alert("Your co")
-    } catch (error) {
-      console.log(error);
-      alert("Couldn't Post Comment");
+    if (!localStorage.getItem("tokenid")) {
+      navigate("/login");
+    } else {
+      setRatingCommand({
+        comment: "",
+        rating: 1,
+        fruitId: id,
+      });
+      try {
+        const response = await fetch(
+          "http://localhost:8000/api/comments/create",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              token: localStorage.getItem("tokenid"),
+            },
+            body: JSON.stringify(ratingCommand),
+          }
+        );
+        console.log(response);
+        const json = await response.json();
+        console.log(json);
+        // alert("Your co")
+      } catch (error) {
+        console.log(error);
+        alert("Couldn't Post Comment");
+      }
     }
   };
 
@@ -151,16 +155,20 @@ const FruitPage = () => {
                 {" "}
                 <i className="fa-regular fa-bookmark"></i> &nbsp;Save For Later
               </button>
-              <button
-                disabled={fruitData?.count === 0}
-                onClick={() => {
-                  addToCart(fruitData);
-                }}
-                className="btnfb"
-              >
-                <i className="fa-solid fa-basket-shopping"></i> &nbsp;
-                {fruitData?.count !== 0 ? "Add To Basket" : "Out of Stock"}
-              </button>
+              {fruitData?.count === 0 ? (
+                <h3 className="outstock">Out of Stock</h3>
+              ) : (
+                <button
+                  disabled={fruitData?.count === 0}
+                  onClick={() => {
+                    addToCart(fruitData);
+                  }}
+                  className="btnfb"
+                >
+                  <i className="fa-solid fa-basket-shopping"></i> &nbsp;
+                  {fruitData?.count !== 0 ? "Add To Basket" : "Out of Stock"}
+                </button>
+              )}
             </div>
           </div>
         </div>

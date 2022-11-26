@@ -1,8 +1,14 @@
 .ordersflexxcol {
   display: flex;
   flex-direction: column;
+  background-color: white;
   padding: 20px;
   margin-top: 10vh;
 
-  border: 2px solid coral;
+  /* border: 2px solid coral; */
+}
+.flexxroworders {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

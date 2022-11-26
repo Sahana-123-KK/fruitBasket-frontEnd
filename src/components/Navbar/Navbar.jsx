@@ -34,12 +34,14 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <div className="navbarflexxrow">
-      <div className="logoflexxrow">
-        {/* <img src={fb} alt="" className="logoimg" /> */}
-        {/* <i class="fa-solid fa-apple-whole logoiconfb"></i> */}
-        <i class="fa-solid fa-lemon logoiconfb"></i>
-        <h4 className="headlogo">Fruit Basket</h4>
-      </div>
+      <Link to="/fruits">
+        <div className="logoflexxrow">
+          {/* <img src={fb} alt="" className="logoimg" /> */}
+          {/* <i class="fa-solid fa-apple-whole logoiconfb"></i> */}
+          <i class="fa-solid fa-lemon logoiconfb"></i>
+          <h4 className="headlogo">Fruit Basket</h4>
+        </div>
+      </Link>
       <div className="linksflexxrow">
         {/* <Link to="/fruits"> */}
         <Link to="/fruits">

@@ -9,8 +9,11 @@
   margin: 10px;
   justify-content: space-between;
 }
+.outstock {
+  color: #a0cd4a;
+}
 .fruititemflexxrownot {
-  cursor:not-allowed;
+  cursor: not-allowed;
   display: flex;
   padding: 10px;
   border-radius: 10px;

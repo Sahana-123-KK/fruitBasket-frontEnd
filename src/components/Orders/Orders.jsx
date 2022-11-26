@@ -38,13 +38,15 @@ const Orders = () => {
 
   return (
     <div className="ordersflexxcol">
-      <h2 className="ordershead">Your Orders</h2>
+      <div className="flexxroworders">
+        <h2 className="ordershead">Your Orders</h2>
+        <Link to="/fruits">
+          <button className="btnfb">Continue Shopping</button>
+        </Link>
+      </div>
       {orders.map((order, ind) => {
         return <OrdersComponent key={ind} order={order} />;
       })}
-      <Link to="/fruits">
-        <button className="btnfb">Continue Shopping</button>
-      </Link>
     </div>
   );
 };

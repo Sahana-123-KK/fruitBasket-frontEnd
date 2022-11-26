@@ -12,6 +12,10 @@
   top: 0px;
   z-index: 100;
 }
+.navbarflexxrow a {
+  text-decoration: none;
+  color: inherit;
+}
 .logoflexxrow {
   display: flex;
   flex-direction: row;

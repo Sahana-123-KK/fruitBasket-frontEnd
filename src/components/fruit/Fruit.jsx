@@ -41,14 +41,19 @@ const Fruit = ({ item }) => {
         <h5 className="fruitcost">
           ₹{item?.price} <span className="crosscost">₹78.95</span>
         </h5>
-        <button
-          onClick={() => {
-            addToCart(item);
-          }}
-          className="btnfb"
-        >
-          Add
-        </button>
+        {item?.count === 0 ? (
+          <h3 className="outstock">Out of Stock</h3>
+        ) : (
+          <button
+            disabled={item?.count === 0}
+            onClick={() => {
+              addToCart(item);
+            }}
+            className="btnfb"
+          >
+            Add
+          </button>
+        )}
       </div>
     </div>
   );

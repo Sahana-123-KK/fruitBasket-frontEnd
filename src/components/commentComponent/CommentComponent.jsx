@@ -120,7 +120,8 @@ const CommentComponent = ({ comment }) => {
         </div>
       )}
       <div className="commentorsname">
-        {JSON.parse(localStorage.getItem("userinfo")).id === comment?.user
+        {localStorage.getItem("tokenid") &&
+        JSON.parse(localStorage.getItem("userinfo")).id === comment?.user
           ? "You"
           : comment?.name}
       </div>
@@ -130,16 +131,17 @@ const CommentComponent = ({ comment }) => {
           {/* For getting time from now like 3mins ago, 4 hours ago*/}
         </div>
 
-        {JSON.parse(localStorage.getItem("userinfo")).id === comment?.user && (
-          <div className="btnscommentactionflexxrow">
-            <button onClick={deleteComment} className="btnfbcommentsdel">
-              Delete
-            </button>
-            <button onClick={handleClick} className="btnfbcommentsdel">
-              {isUpdate ? "Cancel" : "Update"}
-            </button>
-          </div>
-        )}
+        {localStorage.getItem("tokenid") &&
+          JSON.parse(localStorage.getItem("userinfo")).id === comment?.user && (
+            <div className="btnscommentactionflexxrow">
+              <button onClick={deleteComment} className="btnfbcommentsdel">
+                Delete
+              </button>
+              <button onClick={handleClick} className="btnfbcommentsdel">
+                {isUpdate ? "Cancel" : "Update"}
+              </button>
+            </div>
+          )}
       </div>
     </div>
   );
